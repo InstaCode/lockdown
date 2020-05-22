@@ -6,7 +6,7 @@ const username = github.context.actor
 
 function run(): void {
   
-  // small comment to invoke change - DO NOT MERGE
+  // comment to invoke change - DO NOT MERGE
   try {
     core.info(
       `Verifying that username (${username}) is approved for running builds`

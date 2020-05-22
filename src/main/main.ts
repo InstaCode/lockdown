@@ -5,6 +5,8 @@ import * as verify from './verify'
 const username = github.context.actor
 
 function run(): void {
+  
+  // small comment to invoke change - DO NOT MERGE
   try {
     core.info(
       `Verifying that username (${username}) is approved for running builds`

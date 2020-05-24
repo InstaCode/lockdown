@@ -11,6 +11,10 @@ inputs:
   strict:
     description: repo owners are held to the same rules
     required: false
+    default: "false"
+  token:
+    description: GitHub token for checking organization membership
+    required: true
 runs:
   using: 'node12'
   main: 'dist/index.js'

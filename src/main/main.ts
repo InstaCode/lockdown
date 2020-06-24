@@ -8,12 +8,12 @@ const tokenKey = 'token'
 
 const token = core.getInput(tokenKey)
 const octokit = new github.GitHub(token)
-const username = github.context.actor
 let owner = github.context.repo.owner
 let verified = false
 function run(): void {
   try {
     const strict = Boolean(core.getInput(strictKey))
+    const username = github.context.actor
     if (!strict) {
       core.info('Checking repo ownership against author')
       verified = verify.verifyOwner(username)

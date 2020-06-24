@@ -10,16 +10,13 @@ jobs:
   build: # make sure build/ci work properly
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2.3.1
       - run: |
-          npm install
-          npm run format
-          npm run build
-          npm test
+          npm ci
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.1
       - uses: ./
         with:
-          users: dependabot[bot]
+          users: jason-edstrom, dependabot[bot]

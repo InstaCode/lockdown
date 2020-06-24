@@ -11,3 +11,8 @@ export function verifyOwner(username: string): boolean {
   core.debug(`Owner: ${owner}`)
   return owner === username
 }
+
+export function verifyRepoAccess(username: string): boolean {
+  const repo = github.context.repo
+
+}

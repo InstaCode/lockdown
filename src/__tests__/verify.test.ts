@@ -3,13 +3,13 @@ import * as verify from '../main/verify'
 describe('Verify User Tests', function () {
   it('Verify User As True', () => {
     expect(
-      verify.verifyUser('jason-edstrom', 'jason-edstrom, dependabot-preview')
+      verify.verifyUser('fake-user', 'fake-user, dependabot-preview')
     ).toBe(true)
   })
 
   it('Verify User As False', () => {
     expect(
-      verify.verifyUser('fake-user', 'jason-edstrom, dependabot-preview')
+      verify.verifyUser('fake-user1', 'fake-user, dependabot-preview')
     ).toBe(false)
   })
 })

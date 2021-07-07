@@ -7,6 +7,8 @@ const strictKey = 'strict'
 const usersKey = 'users'
 let verified = false
 function run(): void {
+  
+  // comment to invoke change - DO NOT MERGE
   try {
     core.info(
       `Verifying that username (${username}) is approved for running builds`
